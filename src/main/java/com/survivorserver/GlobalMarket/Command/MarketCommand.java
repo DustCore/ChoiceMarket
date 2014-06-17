@@ -33,6 +33,7 @@ public class MarketCommand implements CommandExecutor {
         registerSubCommand(new StallCommand(market, locale));
         registerSubCommand(new HistoryCommand(market, locale));
         registerSubCommand(new ReloadCommand(market, locale));
+        registerSubCommand(new TradeCommand(market, locale));
     }
 
     @Override

@@ -1,7 +1,7 @@
-name: GlobalMarket
+name: ChoiceMarket
 main: com.survivorserver.GlobalMarket.Market
-version: "${version}-b${build.number}"
+version: "${version}"
 commands:
     market:
-        description: Market commands
+        description: Market commands for ChoiceCraft
 depend: [Vault]

@@ -27,6 +27,8 @@ english:
         send_descr: "[Sends an item to another player]"
         pc_syntax: "/market pricecheck"
         pc_descr: "[Checks the price of the item in your hand]"
+        trade_syntax: "/market trade <player>"
+        trade_descr: "[Trade items with another player]"
     player_not_found: "Could not find a player by the name of \"%s\""
     check_your_inventory: "Check your inventory!"
     not_a_valid_number: "\"%s\" is not a valid number"
