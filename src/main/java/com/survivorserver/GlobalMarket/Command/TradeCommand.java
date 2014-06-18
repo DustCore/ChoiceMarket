@@ -1,5 +1,7 @@
 package com.survivorserver.GlobalMarket.Command;
 
+import org.bukkit.ChatColor;
+import org.bukkit.GameMode;
 import org.bukkit.command.CommandSender;
 import org.bukkit.entity.Player;
 
@@ -40,8 +42,12 @@ public class TradeCommand extends SubCommand {
     @Override
     public boolean onCommand(CommandSender sender, String[] args){
     	Player player = (Player) sender;
-    	player.getWorld().strikeLightning(player.getTargetBlock(null, 200).getLocation());
-    	
+    	//player.getWorld().strikeLightning(player.getTargetBlock(null, 200).getLocation());
+        if (player.getGameMode() == GameMode.CREATIVE && !market.allowCreative(player)) {
+            player.sendMessage(ChatColor.RED + locale.get("not_allowed_while_in_creative"));
+            return true;
+        }
+        market.getInterfaceHandler().openInterface(player, null, "Trade");
     	return false;
     }
     

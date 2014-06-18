@@ -198,6 +198,7 @@ public class Market extends JavaPlugin implements Listener {
         interfaceHandler = new InterfaceHandler(this, storage);
         interfaceHandler.registerInterface(new ListingsInterface(this));
         interfaceHandler.registerInterface(new MailInterface(this));
+        interfaceHandler.registerInterface(new TradeInterface(this));
         core = new MarketCore(this, interfaceHandler, storage);
         listener = new InterfaceListener(this, interfaceHandler, storage, core);
         getServer().getPluginManager().registerEvents(listener, this);
